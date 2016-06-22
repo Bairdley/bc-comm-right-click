@@ -7,9 +7,9 @@
 // @description Allows users to open Recent Activity links in a new tab
 // @match       https://forum.bigcommerce.com/*
 // @grant       none
-// @installURL  https://github.com/Bairdley/bc-comm-right-click/blob/master/bc-comm-new-tab.user.js
-// @updateURL   https://github.com/Bairdley/bc-comm-right-click/blob/master/bc-comm-new-tab.user.js
-// @downloadURL https://github.com/Bairdley/bc-comm-right-click/blob/master/bc-comm-new-tab.user.js
+// @installURL  https://github.com/Bairdley/bc-community-right-click/raw/master/bc-community-new-tab.user.js
+// @updateURL   https://github.com/Bairdley/bc-community-right-click/raw/master/bc-community-new-tab.user.js
+// @downloadURL https://github.com/Bairdley/bc-community-right-click/raw/master/bc-community-new-tab.user.js
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js
 // ==/UserScript==
 (function () {
