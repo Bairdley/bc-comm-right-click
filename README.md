@@ -9,6 +9,6 @@
 <p>To use this script, do the following.</p>
 <ol>
 <li>Install <a href="http://www.greasespot.net/">Greasemonkey</a> (Firefox Extension) or <a href="http://tampermonkey.net/">Tampermonkey</a> (Chrome Extension).</li>
-<li>Install script from <a href="https://greasyfork.org/en/scripts/20808-bc-recent-activity-links-open-in-new-tab">this page</a>.</li>
+<li>Install script from <a href="https://github.com/Bairdley/bc-comm-right-click/raw/master/bc-comm-new-tab.user.js">this link</a>.</li>
 <li>Enjoy your new tabs!</li>
 </ol>
