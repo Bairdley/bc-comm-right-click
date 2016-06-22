@@ -5,6 +5,9 @@
 // @match       https://forum.bigcommerce.com/*
 // @version     0.1
 // @grant       none
+// @installURL  https://github.com/Bairdley/bc-comm-right-click/blob/master/bc-comm-new-tab.user.js
+// @updateURL   https://github.com/Bairdley/bc-comm-right-click/blob/master/bc-comm-new-tab.user.js
+// @downloadURL https://github.com/Bairdley/bc-comm-right-click/blob/master/bc-comm-new-tab.user.js
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js
 // ==/UserScript==
 (function () {
