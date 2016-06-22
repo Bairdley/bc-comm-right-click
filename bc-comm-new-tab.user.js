@@ -24,7 +24,7 @@
     if (navigator.appVersion.indexOf('Win') != - 1) {
       OS = 'win';
       keyCodes = {
-        ctrl: 238
+        ctrl: 17
       };
     } else {
       OS = 'mac';
