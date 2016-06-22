@@ -1,4 +1,4 @@
-# bc-comm-right-click
+# bc-community-right-click
 
 <h3>Synopsis</h3>
 <p>By default, the development environment that the <a href="https://forum.bigcommerce.com">BigCommerce Community</a> page is built with does not allow users to open links in a new tab.</p>
