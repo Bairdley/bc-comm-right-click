@@ -59,8 +59,18 @@
             clicks.win.ctrlClick(el);
           }
         } else if (OS === 'mac') {
-          if (keyed === true && currentKey === (keyCodes.cmdFF || keyCodes.cmdL || keyCodes.cmdR)) {
-            clicks.mac.cmdClick(el);
+          if (keyed === true) {
+            switch(true) {
+              case currentKey === keyCodes.cmdFF: 
+                clicks.mac.cmdClick(el);
+                break;
+              case currentKey === keyCodes.cmdL: 
+                clicks.mac.cmdClick(el);
+                break;
+              case currentKey === keyCodes.cmdR: 
+                clicks.mac.cmdClick(el);
+                break;
+            }
           } else if (keyed === true && currentKey === keyCodes.ctrl) {
             setHref.url(el);
           }
