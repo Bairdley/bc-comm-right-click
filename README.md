@@ -4,6 +4,7 @@
 <p>By default, the development environment that the <a href="https://forum.bigcommerce.com">BigCommerce Community</a> page is built with does not allow users to open links in a new tab.</p>
 <p>This script has the very simple purpose of allowing users to open links in a new tab.</p>
 <p>As this is still in its beginning stages, the only links targeted by this script are located under the "Recent Activity" section.</p>
+<p>Please note that ctrl-clicking does not currently work in Firefox for Windows.</p>
 <h3>Installation</h3>
 <p>To use this script, do the following.</p>
 <ol>
