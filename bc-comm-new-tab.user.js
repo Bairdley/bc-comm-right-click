@@ -10,6 +10,7 @@
 // @downloadURL https://github.com/Bairdley/bc-comm-right-click/blob/master/bc-comm-new-tab.user.js
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js
 // ==/UserScript==
+//EDITS
 (function () {
   var OS,
   urlExt = '/s/question/',
