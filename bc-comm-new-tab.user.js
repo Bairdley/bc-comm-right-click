@@ -107,12 +107,14 @@
           newTab();
           newTabCount += 1;
         }
-      },
-      ctrlClick: function (el) {
       }
     },
     win: {
       ctrlClick: function (el) {
+        while (newTabCount < 1) {
+          newTab();
+          newTabCount += 1;
+        }
       }
     },
     right: function (el) {
