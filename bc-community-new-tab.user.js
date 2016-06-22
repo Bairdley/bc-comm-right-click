@@ -14,7 +14,6 @@
 // ==/UserScript==
 
 (function () {
-  
     var OS,
         urlExt = '/s/question/',
         dataID,
