@@ -11,7 +11,6 @@
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js
 // ==/UserScript==
 (function () {
-  console.log('started');
   var OS,
   urlExt = '/s/question/',
   dataID,
