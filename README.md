@@ -1,7 +1,7 @@
 # bc-comm-right-click
 
 <h3>Synopsis</h3>
-<p>By default, the development environment that the BigCommerce Community page is built with does not allow users to open links in a new tab.</p>
+<p>By default, the development environment that the <a href="https://forum.bigcommerce.com">BigCommerce Community</a> page is built with does not allow users to open links in a new tab.</p>
 <p>This script has the very simple purpose of allowing users to open links in a new tab.</p>
 <p>As this is still in its beginning stages, the only links targeted by this script are located under the "Recent Activity" section.</p>
 <h3>Installation</h3>
