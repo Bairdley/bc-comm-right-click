@@ -71,7 +71,7 @@
                   clicks.mac.cmdClick(el);
                   break;
                 case currentKey === keyCodes.ctrl: 
-                  clicks.mac.cmdClick(el);
+                  setHref.url(el);
                   break;
               }
             }
