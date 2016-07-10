@@ -21,83 +21,66 @@
         keyCodes,
         keyed = false,
         currentKey;
-  
-    (function () {
-        if (navigator.appVersion.indexOf('Win') != -1) {
-            OS = 'win';
-            keyCodes = {
-                ctrl: 17
-            };
-        } else {
-            OS = 'mac';
-            keyCodes = {
-                ctrl: 17,
-                cmdL: 91,
-                cmdR: 93,
-                cmdFF: 224
-            };
+    
+    if (navigator.appVersion.indexOf('Win') != -1) {
+        OS = 'win';
+        keyCodes = {
+            ctrl: 17
+        };
+    } else {
+        OS = 'mac';
+        keyCodes = {
+            ctrl: 17,
+            cmdL: 91,
+            cmdR: 93,
+            cmdFF: 224
+        };
+    }
+    
+    $(document).keydown(function (e) {
+        for (var i in keyCodes) {
+            if (e.which === keyCodes[i]) {
+                currentKey = keyCodes[i];
+                keyed = true;
+            }
         }
-    }());
+    });
   
-    $(document)
-        .keydown(function (e) {
-            for (var i in keyCodes) {
-                if (e.which === keyCodes[i]) {
-                    currentKey = keyCodes[i];
-                    keyed = true;
+    $(document).keyup(function (e) {
+        if (e.which === currentKey) {
+            keyed = false;
+        }
+    });
+  
+    $('.compactFeedElement').live('mouseover', function () {
+        $(this).mousedown(function (e) {
+            var el = $(this).find('a').andSelf();
+            if ($(this).attr('data-id')) {
+                dataID = $(this).attr('data-id');
+                if (e.which !== 1 && keyed === false) {
+                    clicks.right(el);
+                } else if (OS === 'win') {
+                    if (keyed === true && currentKey === keyCodes.ctrl) {
+                        clicks.win.ctrlClick(el);
+                    }
+                } else if (OS === 'mac') {
+                    var cmd;
+                    switch (true) {
+                    case currentKey === keyCodes.cmdFF:
+                    case currentKey === keyCodes.cmdL:
+                    case currentKey === keyCodes.cmdR:
+                        clicks.mac.cmdClick(el);
+                        break;
+                    case currentKey === keyCodes.ctrl:
+                        setHref.url(el);
+                        break;
+                    }
                 }
             }
+        }).mouseleave(function () {
+            setHref.void($(this).find('a').andSelf());
         });
-  
-    $(document)
-        .keyup(function (e) {
-            if (e.which === currentKey) {
-                keyed = false;
-            }
-        });
-  
-    $('.compactFeedElement')
-        .live('mouseover', function () {
-            $(this)
-                .mousedown(function (e) {
-                    var el = $(this)
-                        .find('a')
-                        .andSelf();
-                    if ($(this)
-                        .attr('data-id')) {
-                        dataID = $(this)
-                            .attr('data-id');
-                        if (e.which !== 1 && keyed === false) {
-                            clicks.right(el);
-                        } else if (OS === 'win') {
-                            if (keyed === true && currentKey === keyCodes.ctrl) {
-                                clicks.win.ctrlClick(el);
-                            }
-                        } else if (OS === 'mac') {
-                            var cmd;
-                            switch (true) {
-                            case currentKey === keyCodes.cmdFF:
-                                clicks.mac.cmdClick(el);
-                                break;
-                            case currentKey === keyCodes.cmdL:
-                                clicks.mac.cmdClick(el);
-                                break;
-                            case currentKey === keyCodes.cmdR:
-                                clicks.mac.cmdClick(el);
-                                break;
-                            case currentKey === keyCodes.ctrl:
-                                setHref.url(el);
-                                break;
-                            }
-                        }
-                    }
-                })
-                .mouseleave(function () {
-                    setHref.void($(this)
-                        .find('a')
-                        .andSelf());
-                });
-        });
+    });
 
     function newTab() {
         window.open(urlExt + dataID);
@@ -111,12 +94,10 @@
   
     var setHref = {
         url: function (el) {
-            $(el)
-                .attr('href', urlExt + dataID);
+            $(el).attr('href', urlExt + dataID);
         },
         void: function (el) {
-            $(el)
-                .attr('href', 'javascript:void(0)');
+            $(el).attr('href', 'javascript:void(0)');
             keyed = false;
         }
     };
