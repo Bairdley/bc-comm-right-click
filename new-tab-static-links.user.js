@@ -1,6 +1,6 @@
 (function () {
 	var arr = [],
-		keyed = false;
+	    keyed = false;
 
 	$.ajax('https://spreadsheets.google.com/feeds/list/1Fk_RrRaB_-dn_L4pxhHY1usSXlUsq0xelDUpyMSh8IQ/1/public/basic?alt=json').success(function(data) {
 		for (var i = 0; i < data.feed.entry.length; i += 1) {
