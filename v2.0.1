@@ -54,7 +54,7 @@
     }).keyup(function(e) {
         keys.up();
     });
-
+    
     var mouse = {
         button: function(e) {
             return e.which === 1 ? 'left' : 'right';
@@ -120,7 +120,16 @@
                 $(link.current.el).attr('data-aura-rendered-by', link.current.dataAura);
             },
             newTab: function() {
+                var windowFocus;
+                $(window).focus(function() {
+                    windowFocus = true;
+                }).blur(function() {
+                    windowFocus = false;
+                });
                 window.open(link.current.url);
+                if (windowFocus === false) {
+                    keys.pressed = false;
+                }
             }
         }
     };
