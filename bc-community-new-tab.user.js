@@ -141,12 +141,12 @@
                     link.action.setHref();
                 } else if (mouse.button(e) === 'left' && keys.pressed === true) {
                     link.action.removeDataAura();
+                    $(link.current.el).removeAttr('href');
                 }
             },
             mouseup: function(e) {
                 if (mouse.button(e) === 'left' && keys.pressed) {
                     e.stopImmediatePropagation();
-                    $(link.current.el).removeAttr('href');
                     link.action.newTab();
                     setTimeout(function() {
                         link.action.restoreDataAura();
