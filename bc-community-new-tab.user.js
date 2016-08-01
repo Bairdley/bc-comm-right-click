@@ -141,7 +141,6 @@
                     link.action.setHref();
                 } else if (mouse.button(e) === 'left' && keys.pressed === true) {
                     link.action.removeDataAura();
-                    $(link.current.el).removeAttr('href');
                 }
             },
             mouseup: function(e) {
