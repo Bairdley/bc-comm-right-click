@@ -146,6 +146,9 @@
             mouseup: function(e) {
                 if (mouse.button(e) === 'left' && keys.pressed) {
                     e.stopImmediatePropagation();
+                    if ($(link.current.el).hasClass('topicLink')) {
+                        $(link.current.el).removeAttr('href');
+                    }
                     link.action.newTab();
                     setTimeout(function() {
                         link.action.restoreDataAura();
