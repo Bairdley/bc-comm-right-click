@@ -141,6 +141,7 @@
             },
             newTab: function() {
                 //sometimes, new tab will gain focus, meaning keys.pressed will === true until pressed again
+                //checks for current focus when opening a new tab
                 var windowFocus;
                 $(window).focus(function() {
                     windowFocus = true;
@@ -173,7 +174,7 @@
                     e.stopImmediatePropagation();
                     link.action.newTab();
                     //wait 200ms after mouseup before returning data-aura-rendered-by attribute
-                    //this timeout prevents the SPA from loading the link in the original tab
+                    //prevents the SPA from loading the link in the original tab
                     setTimeout(function() {
                         link.action.restoreDataAura();
                     }, 200);
